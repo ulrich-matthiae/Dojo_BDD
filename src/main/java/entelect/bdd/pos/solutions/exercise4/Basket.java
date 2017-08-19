@@ -1,4 +1,4 @@
-package solutions.exercise3;
+package entelect.bdd.pos.solutions.exercise4;
 
 import org.joda.time.DateTime;
 
@@ -11,7 +11,7 @@ public class Basket {
     private Double total = 0.0;
     private DateTime systemDate;
 
-    public void addItem(Double cost, int quantity, String itemType) {
+    public void addItem(Double cost, Double quantity, String itemType) {
         items.add(new BasketItem(cost, quantity, itemType));
     }
 
@@ -24,9 +24,9 @@ public class Basket {
         double costChocolateBar = 0;
 
         for (BasketItem item : items) {
-            Integer quantity = item.getQuantity();
+            Double quantity = item.getQuantity();
 
-            if (systemDate.getMonthOfYear() == Month.SEPTEMBER.getValue() && item.getItemType().contains("chocolate bar")) {
+            if (systemDate != null && systemDate.getMonthOfYear() == Month.SEPTEMBER.getValue() && item.getItemType().contains("chocolate bar")) {
                 countChocolateBar += item.getQuantity();
                 costChocolateBar = item.getCost();
             } else {
@@ -35,7 +35,11 @@ public class Basket {
         }
 
         total += (countChocolateBar / 2 * costChocolateBar) + (countChocolateBar % 2 * costChocolateBar);
+        roundTotal();
+    }
 
+    private void roundTotal() {
+        total = (double) Math.round(total * 100) / 100;
     }
 
     public void setSystemDate(DateTime systemDate) {

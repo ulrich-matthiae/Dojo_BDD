@@ -1,4 +1,4 @@
-package solutions.exercise3;
+package entelect.bdd.pos.exercise4;
 
 public class BasketItem {
     private final String itemType;

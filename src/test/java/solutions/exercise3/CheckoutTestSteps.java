@@ -4,6 +4,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import entelect.bdd.pos.exercise4.Basket;
 import org.joda.time.DateTime;
 import org.junit.Assert;
 
@@ -13,7 +14,7 @@ import java.time.Month;
  * The test steps / glue code used with the checkout feature
  */
 public class CheckoutTestSteps {
-    private solutions.exercise3.Basket basket;
+    private Basket basket;
 
     @Before
     public void before() {
@@ -26,7 +27,7 @@ public class CheckoutTestSteps {
     }
 
     @Given("^the customer has chosen (\\d+) (.+) at (.+) rand each$")
-    public void the_customer_has_chosen_loaves_of_bread_at_rand_each(int quantity, String item, Double cost) throws Throwable {
+    public void the_customer_has_chosen_a_quantity_of_an_item_at_rand_each(Integer quantity, String item, Double cost) throws Throwable {
         basket.addItem(cost, quantity, item);
     }
 

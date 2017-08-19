@@ -16,8 +16,6 @@ public class Basket {
     }
 
     public void calculateTotal() {
-        for (Double item : items) {
-            total += item;
-        }
+        items.forEach(item -> total += item);
     }
 }
