@@ -20,18 +20,22 @@ public class Basket {
     }
 
     public void calculateTotal() {
+        int countChocolateBar = 0;
+        double costChocolateBar = 0;
+
         for (BasketItem item : items) {
-            total += calculateItemTotal(item);
-        }
-    }
+            Integer quantity = item.getQuantity();
 
-    private double calculateItemTotal(BasketItem item) {
-        Integer quantity = item.getQuantity();
-
-        if (systemDate.getMonthOfYear() == Month.SEPTEMBER.getValue() && item.getItemType().contains("chocolate bar")) {
-            quantity = quantity / 2;
+            if (systemDate.getMonthOfYear() == Month.SEPTEMBER.getValue() && item.getItemType().contains("chocolate bar")) {
+                countChocolateBar += item.getQuantity();
+                costChocolateBar = item.getCost();
+            } else {
+                total += item.getCost() * quantity;
+            }
         }
-        return item.getCost() * quantity;
+
+        total += (countChocolateBar / 2 * costChocolateBar) + (countChocolateBar % 2 * costChocolateBar);
+
     }
 
     public void setSystemDate(DateTime systemDate) {

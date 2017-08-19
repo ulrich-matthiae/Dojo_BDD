@@ -33,4 +33,8 @@ Feature: Calculate the total amount due by the customer once they have selected 
     When the customer chooses to checkout
     Then return a total amount due of 20.00 rand
 
-
+  Scenario: A customer picks up 3 chocolate bars during the month of September
+    Given the customer has chosen 3 chocolate bars at 10.00 rand each
+    And the current month is SEPTEMBER
+    When the customer chooses to checkout
+    Then return a total amount due of 20.00 rand
