@@ -8,4 +8,4 @@ Feature: Calculate the total amount due by the customer once they have selected 
 
 #  A customer picks up two loaves of bread (R12.99 each) and a 2l bottle of soda (R14.99 rand each) and chooses to checkout
 
-#  A customer got 1.5 kg of chicken from the butchery section @R32.95/kg and chooses to checkout
+#  A customer got 1.5 kg of chicken from the butchery section @R32.90/kg and chooses to checkout
