@@ -38,7 +38,7 @@ Feature: Calculate the total amount due by the customer once they have selected 
  #   When the customer chooses to checkout
  #   Then return a total amount due of 49.35 rand
 
-  Scenario Outline: A customer got various quntities of chicken from the butchery section @R32.90/kg and chooses to checkout
+  Scenario Outline: A customer got various quantities of chicken from the butchery section @R32.90/kg and chooses to checkout
     Given the customer has chosen <weight> kg of chicken at <pricePerKg> rand per kilogram
     When the customer chooses to checkout
     Then return a total amount due of <totalChickenPrice> rand

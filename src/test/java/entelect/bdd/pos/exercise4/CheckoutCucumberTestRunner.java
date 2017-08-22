@@ -5,6 +5,6 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "classpath:solutions/exercise4/checkout.feature")
+@CucumberOptions(features = "classpath:entelect/bdd/pos/exercise4/checkout.feature")
 public class CheckoutCucumberTestRunner {
 }
