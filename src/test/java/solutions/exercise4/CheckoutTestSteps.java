@@ -49,6 +49,6 @@ public class CheckoutTestSteps {
 
     @Then("^return a total amount due of (.+) rand$")
     public void return_a_total_amount_due_of_rand(Double expectedTotal) throws Throwable {
-        Assert.assertEquals(expectedTotal, basket.getTotal());
+        Assert.assertEquals(expectedTotal, basket.getTotal(), 0.00001);
     }
 }
