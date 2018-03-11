@@ -14,7 +14,7 @@ Feature: Calculate the total amount due by the customer once they have selected 
     When the customer chooses to checkout
     Then return a total amount due of 54.99 rand
 
-#  The product owner has requested new functionality to be added that caters for buy one get one free special offers on all chocolate bars during the month of September.
+#  The product owner has requested new functionality to be added that caters for a “two for the price of one” special offer on all chocolate bars during the month of September.
 #
 #  You will need to:
 #  Create the scenarios (more than one) in the feature file using gherkin syntax
